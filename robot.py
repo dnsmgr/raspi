@@ -88,15 +88,18 @@ while True:
         stopRobot()
     if char == "r":
         print("Go Reverse")
+        stopRobot()
         goBackward()
 
     # The "a" key will toggle the steering left
     if char == "a":
         print("Turn left")
+        stopRobot()
         turnLeft()
     # The "d" key will toggle the steering right
     if char == "d":
         print("Turn right")
+        stopRobot()
         turnRight()
 
     # The "x" key will break the loop and exit the program
@@ -111,3 +114,5 @@ while True:
     # The keyboard character variable will be set to blank, ready
     # to save the next key that is pressed
     char = ""
+
+GPIO.cleanup()

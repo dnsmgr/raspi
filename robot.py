@@ -77,32 +77,30 @@ while True:
     # into variable
     char = getch()
 
-    # The car will drive forward when the "w" key is pressed
-    if char == "w":
-        print("Go Forward")
-        goForward()
-
-    # The car will reverse when the "s" key is pressed
     if char == "s":
         print("Stop")
         stopRobot()
+
+    if char == "w":
+        print("Go Forward")
+        stopRobot()
+        goForward()
+
     if char == "r":
         print("Go Reverse")
         stopRobot()
         goBackward()
 
-    # The "a" key will toggle the steering left
     if char == "a":
         print("Turn left")
         stopRobot()
         turnLeft()
-    # The "d" key will toggle the steering right
+
     if char == "d":
         print("Turn right")
         stopRobot()
         turnRight()
 
-    # The "x" key will break the loop and exit the program
     if char == "x":
         print("Program Ended")
         break

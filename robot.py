@@ -38,15 +38,21 @@ def goBackward():
     GPIO.output(backwardRight, True)
     GPIO.output(backwardLeft, True)
 
-
 def turnRight():
     # Turn right
-    GPIO.output(backwardRight, True)
-
+    #GPIO.output(backwardRight, True)
+    GPIO.output(backwardLeft, True)
+    #GPIO.output(backwardRight, True)
+    GPIO.output(forwardRight, True)
 
 def turnLeft():
     # Turn Left
-    GPIO.output(backwardLeft, True)
+    GPIO.output(forwardLeft, True)
+    #GPIO.output(backwardRight, True)
+    GPIO.output(backwardRight, True)
+    #GPIO.output(forwardLeft, False)
+    #GPIO.output(backwardRight, False)
+    #GPIO.output(backwardLeft, False)
 
 
 # The getch method can determine which key has been pressed
@@ -60,6 +66,8 @@ def getch():
         ch = sys.stdin.read(1)
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+	
+
     return ch
 
 
